@@ -30,6 +30,9 @@ class Post(models.Model):
         """
         return self.comments.filter(approved_comment=True)
 
+    def get_absolute_url(self):
+        return reverse("post_detail", kwargs={"pk": self.pk})
+
     def __str__(self):
         """ We ain't done yet with this method, but for now it gets the job done
         
@@ -53,6 +56,9 @@ class Comment(models.Model):
     def approve(self):
         self.approved_comment = True
         self.save()
+
+    def get_absolute_url(self):
+        return reverse("post_list", kwargs={"pk": self.pk})    
 
     def __str__(self):
         return self.text

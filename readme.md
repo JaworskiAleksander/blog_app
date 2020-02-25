@@ -37,6 +37,8 @@
 	+ models are reflected into database sqlite3
 + it's a design to allow only one user to create posts, which is reflected in class Post design
 + timezone settings are specified in settings.py file
++ reverse - after user created new object of that type, where should be they taken then
+
 
 WARNINGS:
 blog.Post.create_date: (fields.W161) Fixed default value provided.
