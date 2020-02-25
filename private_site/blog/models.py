@@ -11,3 +11,29 @@ class Post(models.Model):
     create_date = models.DateTimeField(default = timezone.now)
     publish_date = models.DateTimeField(blank = True, null = True)
 
+    def publish(self):
+        """
+        release the post once this method is used
+        set publish_date to the moment it's published
+        save the post instance into database
+        """
+        self.publish_date = timezone.now()
+        self.save()
+
+    def approve_comments(self):
+        """Once we have a list of comments posted by viewers, only the approved 
+        ones will be displayed
+        Grab those comments and filter them
+        
+        Returns:
+            [type] -- [description]
+        """
+        return self.comments.filter(approved_comments=True)
+
+    def __str__(self):
+        """ We ain't done yet with this method, but for now it gets the job done
+        
+        Returns:
+            [string] -- [string representation of a post title]
+        """
+        return self.title
