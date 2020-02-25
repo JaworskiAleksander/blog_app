@@ -37,3 +37,7 @@
 	+ models are reflected into database sqlite3
 + it's a design to allow only one user to create posts, which is reflected in class Post design
 + timezone settings are specified in settings.py file
+
+WARNINGS:
+blog.Post.create_date: (fields.W161) Fixed default value provided.
+        HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
