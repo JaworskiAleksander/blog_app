@@ -28,7 +28,7 @@ class Post(models.Model):
         Returns:
             [type] -- [description]
         """
-        return self.comments.filter(approved_comments=True)
+        return self.comments.filter(approved_comment=True)
 
     def __str__(self):
         """ We ain't done yet with this method, but for now it gets the job done
@@ -39,10 +39,20 @@ class Post(models.Model):
         return self.title
 
 class Comment(models.Model):
-    """Comments are almost like a mini-posts    
+    """Comments are almost like a mini-posts
+    'approved_comment' field name should match with filter parameter used in
+     approve_comments method in Post class
+
     """
     post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length = 200)
     text = models.TextField()
     create_date = models.DateTimeField(default = timezone.now())
     approved_comment = models.BooleanField(default = False)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text
