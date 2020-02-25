@@ -41,6 +41,7 @@
 + reverse - after user created new object of that type, where should be they taken then
 + widgets dictionary in forms.py
 	+ that's how you connect forms and css styling
++ how to add empty folders to git ?
 
 
 WARNINGS:
