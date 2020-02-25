@@ -26,3 +26,11 @@
 	+ everything else is just a matter of RTFM and using google/stack overflow/slack/et c.
 + best practice is to create new conda env for each project
 	+ this fits nicely with devops rule of immutability of working environment for each project separately
++ when using CBV, setting up models first will dictate how every other component will be build
+	+ you should pay close attention to your initial app design, to m
+	+ codebase flexibility should a built-in feature of your work, as refactoring is the norm
+	+ additional reading:
+		+ DP GoF
+		+ Clean Code by Uncle Bob
+		+ Refacotring by Fowley
+		+ Refactoring by J. Kerievsky
