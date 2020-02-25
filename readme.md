@@ -29,15 +29,18 @@
 + when using CBV, setting up models first will dictate how every other component will be build
 	+ you should pay close attention to your initial app design, to m
 	+ codebase flexibility should a built-in feature of your work, as refactoring is the norm
-	+ additional reading:
-		+ DP GoF
-		+ Clean Code by Uncle Bob
-		+ Refacotring by Fowley
-		+ Refactoring by J. Kerievsky
+	+ additional BASIC reading on writing readable and flexible code / this is just the tip of an iceberg!
+		+ DP GoF - learn design patterns
+		+ Head First: Design Patterns - in case you had problems with out-dated examples in GoF
+		+ Clean Code by Uncle Bob - learn how to write design patterns clearly
+		+ Refactoring by Fowley - learn how to refactor stuff to design patterns
+		+ Refactoring by J. Kerievsky - improve your refactoring skills
 	+ models are reflected into database sqlite3
 + it's a design to allow only one user to create posts, which is reflected in class Post design
 + timezone settings are specified in settings.py file
 + reverse - after user created new object of that type, where should be they taken then
++ widgets dictionary in forms.py
+	+ that's how you connect forms and css styling
 
 
 WARNINGS:
