@@ -17,6 +17,8 @@
 # troubleshooting
 + 'no module module_name' error
 	+ pip install module_name
++ how to run server
+	+ python manage.py runserver
 
 # Additional info
 + personal project = personal responsibility to find out how to do it
