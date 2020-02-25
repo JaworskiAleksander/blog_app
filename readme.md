@@ -10,6 +10,8 @@
 + django
 
 # log
++ not needed et, as it's all v0.1
++ git commit history is where you'll find complete log
 
 # troubleshooting
 + 'no module module_name' error
