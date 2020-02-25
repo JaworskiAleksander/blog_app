@@ -28,7 +28,7 @@
 	+ this fits nicely with devops rule of immutability of working environment for each project separately
 + when using CBV, setting up models first will dictate how every other component will be build
 	+ you should pay close attention to your initial app design, to m
-	+ codebase flexibility should a built-in feature of your work, as refactoring is the norm
+	+ codebase flexibility should be a built-in feature of your work, as refactoring is the norm
 	+ additional BASIC reading on writing readable and flexible code / this is just the tip of an iceberg!
 		+ DP GoF - learn design patterns
 		+ Head First: Design Patterns - in case you had problems with out-dated examples in GoF
