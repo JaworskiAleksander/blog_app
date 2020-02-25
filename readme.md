@@ -34,3 +34,6 @@
 		+ Clean Code by Uncle Bob
 		+ Refacotring by Fowley
 		+ Refactoring by J. Kerievsky
+	+ models are reflected into database sqlite3
++ it's a design to allow only one user to create posts, which is reflected in class Post design
++ timezone settings are specified in settings.py file
