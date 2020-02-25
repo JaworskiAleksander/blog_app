@@ -3,9 +3,7 @@ from blog.models import Post, Comment
 
 class PostForm(forms.ModelForm):
     """
-    
-    Arguments:
-        forms {[type]} -- [description]
+    create form in order to acquire post from user
     """
 
     class Meta():
@@ -18,10 +16,8 @@ class PostForm(forms.ModelForm):
         }
 
 class CommentForm(forms.ModelForm):
-    """ Handle form required to receive data from users
-    
-    Arguments:
-        forms {[type]} -- [description]
+    """ 
+    create form in order to acquire comment from user
     """
     class Meta():
         model = Comment
