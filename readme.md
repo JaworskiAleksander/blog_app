@@ -55,6 +55,11 @@
 	+ python version of sql
 		published_date__lte - grab a field 'published_date' and filter it ('__') by Less Than or Equal (lte)
 		'-' - means we're sorting them in descending, from the greatest value (newest) to the lowest (oldest)
++ check out django documentation on db queries using filters in views
++ LoginRequiredMixin
+	+ this baby handles everything related to login required to use that view
+
++ using reverse_lazy ... because it's less typing :-)
 
 
 + how to add empty folders to git ?
