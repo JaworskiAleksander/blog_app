@@ -13,9 +13,9 @@
 ## workflow
 + models
 + forms
-+ admin
 + views
 + urls
++ admin
 
 ## log
 + not needed et, as it's all v0.1
@@ -51,6 +51,10 @@
 	+ syntax is as follow
 		'fieldName' : forms.fieldType(attrs={'class':'className'})
 + once a person is logged in, it gets redirected to home page
++ get_queryset
+	+ python version of sql
+		published_date__lte - grab a field 'published_date' and filter it ('__') by Less Than or Equal (lte)
+		'-' - means we're sorting them in descending, from the greatest value (newest) to the lowest (oldest)
 
 
 + how to add empty folders to git ?
