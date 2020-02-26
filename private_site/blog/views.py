@@ -3,7 +3,8 @@ from blog.models import Post, Comment
 from django.contrib.auth.mixins import LoginRequiredMixin
 from blog.forms import PostForm, CommentForm
 from django.views.generic import (TemplateView, ListView,
-                                DetailView, CreateView)
+                                DetailView, CreateView,
+                                UpdateView)
 
 # Create your views here.
 
@@ -24,4 +25,10 @@ class CreatePostView(CreateView, LoginRequiredMixin):
     redirect_field_name = 'blog/post_detail.html'
     form_class = PostForm
 
+    model = Post
+
+class PostUpdateView(UpdateView, LoginRequiredMixin):
+    login_url = '/login/'
+    redirect_field_name = 'blog/post_detail.html'
+    form_class = PostForm
     model = Post
