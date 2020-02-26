@@ -42,7 +42,8 @@ class Post(models.Model):
         return self.title
 
 class Comment(models.Model):
-    """Comments are almost like a mini-posts
+    """
+    Comments are almost like a mini-posts
     'approved_comment' field name should match with filter parameter used in
      approve_comments method in Post class
 
