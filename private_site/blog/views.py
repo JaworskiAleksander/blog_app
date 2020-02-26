@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from blog.models import Post, Comment
-from django.contrib.auth import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from blog.forms import PostForm, CommentForm
 from django.views.generic import (TemplateView, ListView,
                                 DetailView, CreateView)
