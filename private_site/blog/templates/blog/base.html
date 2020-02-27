@@ -60,9 +60,15 @@
         </div>
       </nav>
     <!-- CONTENT BLOCK -->
-    {% block body_block %}
+    <div class='content container'>
+        <div class='row'>
+            <div class='col-md-8'>
+                <div class='blog_posts'></div>
+                {% block body_block %}
 
-    {% endblock %}
-    
+                {% endblock %}
+            </div>
+        </div>
+    </div>    
 </body>
 </html>
