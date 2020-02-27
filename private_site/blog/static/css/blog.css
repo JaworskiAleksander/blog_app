@@ -1,15 +1,19 @@
 .techfont{
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Trade Winds', sans-serif;
     font-size: 1.5em;
     margin-bottom: 10px;
   }
   
+.custom-navbar{
+    
+}
+
   .postdate{
     text-align: center;
   }
   
   .posttitle{
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 3em;
     text-align: center;
   }
