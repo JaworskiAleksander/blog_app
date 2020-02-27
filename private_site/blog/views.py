@@ -1,3 +1,6 @@
+########################################
+# django imports
+
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
@@ -7,11 +10,15 @@ from django.views.generic import (TemplateView, ListView,
                                 DetailView, CreateView,
                                 UpdateView, DeleteView)
 
+########################################
+# application import
+
 from blog.models import Post, Comment
 from blog.forms import PostForm, CommentForm
 
 
-# Create your views here.
+########################################
+# Class-Based Views
 
 class AboutView(TemplateView):
     template_name = 'about.html'
@@ -50,6 +57,9 @@ class DraftListView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return Post.objects.filter(publish_date__isnull=True).order_by('create_date')
 
+########################################
+# Method-Based Views
+
 @login_required
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -66,7 +76,7 @@ def add_comment_to_post(request, pk):
         form = CommentForm()
 
     return render(request, 'blog/comment_form.html', {'form':form})
-            
+
 @login_required
 def comment_approve(request, pk):
     comment = get_object_or_404(Comment, pk = pk)
