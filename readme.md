@@ -63,7 +63,7 @@
 
 
 + how to add empty folders to git ?
-
++ // check out django documentation on db queries using filters in viewss
 
 WARNINGS:
 blog.Post.create_date: (fields.W161) Fixed default value provided.
