@@ -13,8 +13,8 @@
 ## workflow
 + models
 + forms
-+ views
-+ urls
++ views and urls
++ templates / frond-end part
 + admin
 
 ## log
@@ -60,6 +60,10 @@
 	+ this baby handles everything related to login required to use that view
 
 + using reverse_lazy ... because it's less typing :-)
++ @login_required decorators used when an authorization is necessary for an action to be performed
++ render() vs redirect()?
+	+ redirects sends user to the page
+	+ render generates a page with a context dictionary into the template and returns HttpResponse object with tha rendered text 
 
 
 + how to add empty folders to git ?
