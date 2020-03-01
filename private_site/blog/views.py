@@ -21,7 +21,7 @@ from blog.forms import PostForm, CommentForm
 # Class-Based Views
 
 class AboutView(TemplateView):
-    template_name = 'about.html'
+    template_name = 'blog/about.html'
 
 class PostListView(ListView):
     model = Post
@@ -31,12 +31,12 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
+    template_name='post_detail.html'
     
 class CreatePostView(CreateView, LoginRequiredMixin):
     login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
     form_class = PostForm
-
     model = Post
 
 class PostUpdateView(UpdateView, LoginRequiredMixin):
@@ -97,5 +97,4 @@ def comment_remove(request,pk):
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk = pk)
     post.publish()
-
     return redirect('post_detail', pk = pk)
