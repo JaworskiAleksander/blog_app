@@ -31,7 +31,6 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
-    template_name='post_detail.html'
     
 class CreatePostView(CreateView, LoginRequiredMixin):
     login_url = '/login/'
@@ -51,7 +50,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
 
 class DraftListView(LoginRequiredMixin, ListView):
     login_url = '/login/'
-    redirect_field_name = 'blog/post_list.html'
+    redirect_field_name = 'blog/post_draft_list.html'
     model = Post
 
     def get_queryset(self):
@@ -91,7 +90,7 @@ def comment_remove(request,pk):
 
     comment.delete()
 
-    return redirect('post_delete', pk = post_pk)
+    return redirect('post_detail', pk = post_pk)
 
 @login_required
 def post_publish(request, pk):

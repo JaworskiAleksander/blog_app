@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from django.urls import reverse,reverse_lazy
+from django.urls import reverse
 
 # Create your models here.
 
@@ -59,7 +59,7 @@ class Comment(models.Model):
         self.save()
 
     def get_absolute_url(self):
-        return reverse("post_list", kwargs={"pk": self.pk})    
+        return reverse("post_list")    
 
     def __str__(self):
         return self.text
