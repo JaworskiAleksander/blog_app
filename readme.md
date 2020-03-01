@@ -31,4 +31,5 @@
 # Additional info
 + debuggin problems caused by adding `app_name` in urls.py was ... fun :-)
 + I'e learned how to use basic functionality of VS Code while designing and writing this app
++ I'm not a UI/UX guy ...
 
