@@ -6,6 +6,7 @@
 + css
 + js
 + html
++ bootstrap
 + python
 + django
 + VS Code with a bunch of plugins
@@ -26,4 +27,8 @@
 	+ pip install module_name
 + how to run server
 	+ python manage.py runserver
+
+# Additional info
++ debuggin problems caused by adding `app_name` in urls.py was ... fun :-)
++ I'e learned how to use basic functionality of VS Code while designing and writing this app
 
