@@ -64,6 +64,8 @@
 + render() vs redirect()?
 	+ redirects sends user to the page
 	+ render generates a page with a context dictionary into the template and returns HttpResponse object with tha rendered text 
++ post_detail.html
+	+ 
 
 
 + how to add empty folders to git ?
